@@ -11,5 +11,6 @@ public class JenkinsCI {
     @Test
     public void 젠킨스_CI_테스트() {
         log.info("jenkins ci test");
+        assertEquals(true, false);
     }
 }
