@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
-public class JenkinsCI {
+public class CITest {
 
     @Test
-    public void 젠킨스_CI_테스트() {
-        log.info("jenkins ci test");
+    public void 테스트코드_실패_테스트() {
+        log.info("테스트코드 실패 test");
         assertEquals(1, 2);
     }
 }
