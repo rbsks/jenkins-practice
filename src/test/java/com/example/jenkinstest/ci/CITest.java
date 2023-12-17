@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CITest {
 
     @Test
-    public void 테스트코드_실패_테스트() {
-        log.info("테스트코드 실패 test");
-        assertEquals(1, 2);
+    public void 테스트코드_성공_테스트() {
+        log.info("테스트코드 성공 test");
+        assertEquals(2, 2);
     }
 }
