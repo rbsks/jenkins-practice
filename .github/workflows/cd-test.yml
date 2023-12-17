@@ -37,7 +37,7 @@ jobs:
       run: ./gradlew bootJar
 
     - name: Copy jar file to remote
-      uses: appleboy/scp-action@v1.0
+      uses: appleboy/scp-action@v0.1.4
       with:
         username: ${{ secrets.DEPLOY_DEV_USER }}
         host: ${{ secrets.DEPLOY_DEV_IP }}
