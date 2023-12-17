@@ -51,7 +51,7 @@ jobs:
       with:
         username: ${{ secrets.DEPLOY_DEV_USER }}
         host: ${{ secrets.DEPLOY_DEV_IP }}
-        key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
+        key: ${{ secrets.DEPLOY_DEV_SSH_KEY }}
         script: |
           cd /cd
           ls -al
