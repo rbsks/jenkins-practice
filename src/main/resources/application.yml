@@ -1,0 +1,6 @@
+server:
+  port: 770
+
+spring:
+  profiles:
+    default: dev
