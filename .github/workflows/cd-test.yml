@@ -33,9 +33,6 @@ jobs:
 
         echo "${{ secrets.APPLICATION_DEV_YAML }}" | base64 --decode > ./application-dev.yml
 
-        ls -al
-        cat ./application-dev.yml
-
     - name: make jar
       run: ./gradlew bootJar
 
@@ -49,7 +46,7 @@ jobs:
         target: "/stylelab_app/upload"
         strip_components: 2
 
-    - name: executing remote ssh commands using password
+    - name: executing remote ssh 
       uses: appleboy/ssh-action@v1.0.0
       with:
         username: ${{ secrets.DEPLOY_DEV_USER }}
