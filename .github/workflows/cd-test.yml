@@ -25,9 +25,7 @@ jobs:
     - name: Make application-dev.yml
       run: |
         cd src/main/resources
-        
         touch ./application-dev.yml
-
         echo "${{ secrets.APPLICATION_DEV_YAML }}" | base64 --decode > ./application-dev.yml
 
     - name: Make jar
@@ -51,5 +49,4 @@ jobs:
         key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
         script: |
           cd /stylelab_app
-          ls -al
           ./deploy.sh
