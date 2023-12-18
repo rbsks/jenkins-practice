@@ -1,7 +1,7 @@
 name: cd
 on:
   push:
-    branches: [ develop ]
+    branches: [ releases-** ]
 
 jobs:
   cd-test: 
