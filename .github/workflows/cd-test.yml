@@ -34,6 +34,7 @@ jobs:
         echo "${{ secrets.APPLICATION_DEV_YAML }}" | base64 --decode > ./application-dev.yml
 
         ls -al
+        cat ./application-dev.yml
 
     - name: make jar
       run: ./gradlew bootJar
