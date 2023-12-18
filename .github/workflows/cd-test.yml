@@ -43,7 +43,7 @@ jobs:
         host: ${{ secrets.DEPLOY_DEV_IP }}
         key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
         source: "./build/libs/*.jar"
-        target: "/stylelab_app"
+        target: "/stylelab_app/upload"
         strip_components: 2
 
     - name: executing remote ssh commands using password
