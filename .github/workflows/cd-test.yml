@@ -25,8 +25,12 @@ jobs:
     - name: Make application-dev.yml
       run: |
         cd src/main/resources
+        
         touch ./application-dev.yml
         echo "${{ secrets.APPLICATION_DEV_YAML }}" | base64 --decode > ./application-dev.yml
+
+        touch ./application-local.yml
+        echo "${{ secrets.APPLICATION_DEV_YAML }}" | base64 --decode > ./application-local.yml
 
     - name: Make jar
       run: ./gradlew bootJar
