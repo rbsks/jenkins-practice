@@ -38,8 +38,6 @@ jobs:
 
         ls -al
         cat ./application.yml
-        cat ./application-dev.yml
-        cat ./application-local.yml
         
     - name: Test with Gradle
       run: ./gradlew test
