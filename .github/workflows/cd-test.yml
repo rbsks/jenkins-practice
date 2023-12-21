@@ -45,22 +45,22 @@ jobs:
     - name: Make jar
       run: ./gradlew bootJar
 
-    - name: Copy jar file to remote
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        username: ${{ secrets.DEPLOY_DEV_USER }}
-        host: ${{ secrets.DEPLOY_DEV_IP }}
-        key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
-        source: "./build/libs/*.jar"
-        target: "/stylelab_app/upload"
-        strip_components: 2
+#    - name: Copy jar file to remote
+#      uses: appleboy/scp-action@v0.1.4
+#      with:
+#        username: ${{ secrets.DEPLOY_DEV_USER }}
+#        host: ${{ secrets.DEPLOY_DEV_IP }}
+#        key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
+#        source: "./build/libs/*.jar"
+#        target: "/stylelab_app/upload"
+#        strip_components: 2
 
-    - name: Executing remote ssh 
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        username: ${{ secrets.DEPLOY_DEV_USER }}
-        host: ${{ secrets.DEPLOY_DEV_IP }}
-        key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
-        script: |
-          cd /stylelab_app
-          ./deploy.sh
+#    - name: Executing remote ssh 
+#      uses: appleboy/ssh-action@v1.0.0
+#      with:
+#        username: ${{ secrets.DEPLOY_DEV_USER }}
+#        host: ${{ secrets.DEPLOY_DEV_IP }}
+#        key: ${{ secrets.DEPLOY_DEV_SSH_PRIVATE_KEY }}
+#        script: |
+#          cd /stylelab_app
+#          ls -al
